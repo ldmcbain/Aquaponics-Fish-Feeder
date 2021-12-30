@@ -1,0 +1,31 @@
+body {
+  overflow: hidden;
+
+  //auto size font based upon screen size
+  font-size: calc(16px + 1vw);
+  line-height: calc(1.1em + 0.5vw);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+
+  //split up web page into header, body, and footer
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr 30px;
+}
+
+.body {
+  //setup grid for main body content
+  //will have left hand title and rest for data etc
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  overflow: hidden;
+}
+
+.gridcontent {
+  //ensure scrolling on grid content
+  overflow-y: scroll;
+  padding: 20px;
+}
